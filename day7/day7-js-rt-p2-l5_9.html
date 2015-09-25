@@ -1,0 +1,19 @@
+<html>
+	<body>
+		<script>
+		var stringList = ['string one', 'string two', 'string three', 4, 'string five'];
+
+		function numStrings(list) {
+		  var stringCount = 0;
+			for (var i = 0; i < list.length; i++) {
+				if (typeof(list[i]) == "string") {
+					stringCount++;
+				}
+			}
+			return stringCount;
+		}
+		console.log(numStrings(stringList));
+  		
+		</script>
+	</body>
+</html>
