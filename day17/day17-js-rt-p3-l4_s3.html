@@ -1,0 +1,45 @@
+<html>
+	<body>
+		<script>
+			var aquarium = { 
+			Nemo: { type: "fish", species: "clownfish", length: 3.7 },
+			Dory: { type: "fish", species: "blue tang", length: 6.2 },
+			"Coral Castle": { type: "environment", material: "coquina", moves: false },
+			"Dragom Statue": { type: "environment", material: "plastic", moves: false},
+			addCritter: function ( name, type, species, length ) {
+				this[name] = {type: type, species: species, length: length};
+			}
+		};
+
+		// In order to call the function is just necesary to reference it as a property
+		// aquarium.addCritter("Bubbles", "fish", "yellow tang", 5.6);
+
+		// Deleting a property or a function is like this:
+
+		aquarium.takeOut = function ( name ) {
+			this[name].name = name;
+			var temp = this[name];
+			delete this[name];
+			return temp;
+		};
+
+		// var numFish = 0;
+		// for ( key in aquarium ) {
+		// 	if ( aquarium[key].type == "fish" ) {
+		// 		numFish++;
+		// 	}
+		// }
+
+		aquarium.countFish = function () {
+			var numFish = 0;
+			for ( key in this ) {
+				if ( this[key].type == "fish" ) {
+					numFish++;
+				}
+			}
+			return numFish;
+		}
+
+		</script>
+	</body>
+</html>

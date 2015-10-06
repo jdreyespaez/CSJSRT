@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<script>
+		var witch = "I'll get you, my pretty... and your little dog, too!";
+		var scarecrow = "Well, some people without brains do an awful lot of talking don't thay?";
+
+		String.prototype.countAll = function(letter) {
+			// body...
+			var letterCount = 0;
+			for (var i = 0; i < this.length; i++) {
+				if ( this.charAt(i).toUpperCase() == letter.toUpperCase() ) {
+					letterCount++;
+				}
+			};
+			return letterCount;
+		};
+
+		</script>
+	</body>
+</html>
